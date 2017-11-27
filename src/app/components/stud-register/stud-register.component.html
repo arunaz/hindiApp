@@ -1,0 +1,120 @@
+<div class="container-fluid custom">
+      <div class="heading_basic">
+          <span> Students Registration</span>
+        </div>
+
+
+        <!-- <form class="form-horizontal" [formGroup]="formData">
+            
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <label for="email" class="control-label">Email</label>
+                  <input type="text" id="email" class="form-control" formControlName="email">
+                </div>
+              </div>
+            
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <label for="password" class="control-label">Password</label>
+                  <input type="password" id="password" class="form-control" formControlName="name">
+                </div>
+              </div>
+            
+              <button type="submit" class="btn btn-primary" [disabled]="!formData.valid">
+                Submit
+              </button>
+            
+            </form> -->
+    <form [formGroup]="formData">
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="usr">Name</label>
+        <input type="text" class="form-control input-sm" id="usr" formControlName="name" maxlength="60">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="std">Class/Year/Other</label>
+        <input type="text" class="form-control input-sm" id="Std" formControlName="class" maxlength="20">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="sch">School/College/Other</label>
+        <input type="text" class="form-control input-sm" id="sch" formControlName="school" maxlength="60">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="date">Date of Birth</label>
+        <input class="form-control input-sm" type="date" value="2011-08-19" id="date" formControlName="date">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="fName">Father/Guardian Name</label>
+        <input type="text" class="form-control input-sm" id="fName" formControlName="fName" maxlength="40">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="dateJoin">Date of Join</label>
+        <input class="form-control input-sm" type="date" value="" id="dateJoin" formControlName="dateJoin">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="fOcc">Father/Guardian Occupation</label>
+        <input type="text" class="form-control input-sm" id="fOcc" formControlName="fOcc" maxlength="20">
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="mName">Mother Name - Occupation</label>
+        <input type="text" class="form-control input-sm" id="mName" placeholder="Mother Name - Occupation" formControlName="mName" maxlength="60">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="pNo">Phone No</label>
+        <input type="text" class="form-control input-sm" id="pNo" formControlName="phoneNo" maxlength="10">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="hindi">Hindi</label>
+        <select class="form-control" id="hindi" formControlName="hindi">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="abacus">Abacus</label>
+        <select class="form-control" id="abacus" formControlName="abacus">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="comment">Address</label>
+        <textarea class="form-control" rows="2" id="comment" formControlName="address"></textarea>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+        <label for="input-type">Gender</label>
+        <div id="input-type" class="row">
+          <div class="col-sm-2">
+            <label class="radio-inline">
+              <input name="gender" id="input-type-M" value="M" type="radio" formControlName="gender"/>Male
+            </label>
+          </div>
+          <div class="col-sm-10">
+            <label class="radio-inline">
+              <input name="gender" id="input-type-F" value="F" type="radio" formControlName="gender"/>Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+          <span class="pull-right"><button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button></span>
+          <!-- <span class="pull-right"><button type="submit" class="btn btn-primary" [disabled]="!formData.valid" (click)="onSubmit()">Submit</button></span> -->
+      </div>
+    </form>
+</div>
