@@ -10,11 +10,11 @@ import { AuthService } from '../../services/auth.service';
 export class StudRegisterComponent implements OnInit {
 
   formData: FormGroup;
-  authService : AuthService;
-  constructor(private formBuilder: FormBuilder) { }
-
+  constructor(private formBuilder: FormBuilder, private auth: AuthService) { }
+  // constructor() {}
+  
   ngOnInit() {
-    // this.authService.test();
+    this.auth.test();
     this.formData = this.formBuilder.group({
       name: [null, Validators.required],
       class: [null, Validators.required],
