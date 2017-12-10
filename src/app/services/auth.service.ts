@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-  test(): string {
-    console.log("  service file")
+
+  
+  test(formData): string {
+    console.log("  service file", formData)
     return 'working';
   }
 }

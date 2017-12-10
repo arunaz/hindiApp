@@ -1,0 +1,71 @@
+<div class="container-fluid custom">
+  <div class="heading_basic">
+    <span> Students View</span>
+  </div>
+  <form [formGroup]="formData">
+    <div *ngIf="value.length" class="error"> {{value}}</div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 form-group">
+        <label for="hindi">Hindi</label>
+        <select class="form-control" id="hindi" formControlName="hindi">
+          <option value="none" [selected]="true">Select Hindi</option>
+          <option value="h1">Hindi 1</option>
+          <option value="h2">Hindi 2</option>
+          <option value="h3">Hindi 3</option>
+          <option value="h4">Hindi 4</option>
+          <option value="h5">Hindi 5</option>
+        </select>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 form-group">
+        <label for="abacus">Abacus</label>
+        <select class="form-control" id="abacus" formControlName="abacus">
+          <option value="none" [selected]="true">Select Abcaus</option>
+          <option value="A1">Abacus 1</option>
+          <option value="A2">Abacus 2</option>
+          <option value="A3">Abacus 3</option>
+          <option value="A4">Abacus 4</option>
+          <option value="A5">Abacus 5</option>
+          <option value="A6">Abacus 6</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2 form-group margin-top20px">
+        <span class="pull-right">
+          <button type="submit" class="btn btn-primary" (click)="getStudDetails()">Search</button>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 table_custom">
+        <!-- <hr> -->
+        <table class="table table-bordered table-striped table-condensed table-hover">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Date</td>
+              <td>Phone No</td>
+              <td>Course</td>
+              <td>Father Name</td>
+              <td>Book</td>
+              <td>Fee Details</td>
+              <td>Marks</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t_Id of tableData; let i=index">
+              <td><a>{{ t_Id.fOcc }}</a></td>
+              <td>{{ t_Id.name }}</td>
+              <td>{{ t_Id.date }}</td>
+              <td>{{ t_Id.address }}</td>
+              <td>{{ t_Id.fName }}</td>
+              <td>{{ t_Id.hindi }}</td>
+              <td>{{ t_Id.abacus }}</td>
+              <td>{{ t_Id.std }}</td>
+            </tr>
+            <tr *ngIf="!tableData.length"><td colspan="8" class="text-align">  No Records Found ! </td></tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>

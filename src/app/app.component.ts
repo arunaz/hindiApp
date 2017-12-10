@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hindi';
-  ngOnInit(): void {
-    console.log(" value in hsasjdasd  ");
+  // ngOnInit(): void {
+  //   console.log(" value in hsasjdasd  ");
     
-  }
+  // }
   // console.log();
   
 }
